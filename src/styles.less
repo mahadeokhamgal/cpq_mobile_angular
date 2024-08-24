@@ -52,4 +52,41 @@ background-color: #a3c9d1;
 }
  
  
- 
+body {
+  font-family: Arial, sans-serif;
+}
+.plan-container {
+  background: linear-gradient(white, #009688);
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,.1);
+  margin: auto;
+  color: #333;
+}
+.plan-header {
+  text-align: center;
+  color: #333;
+}
+.data-allowance {
+  font-size: 48px;
+  text-align: center;
+  color: #333;
+}
+.price {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+ul.plan-inclusions {
+  list-style: none;
+  padding-left: 0;
+}
+ul.plan-inclusions li {
+  margin-bottom: .25em;
+}
+ul.plan-inclusions li::before {
+  content: "\\2713";
+  color: green;
+  margin-right: .5em;
+}

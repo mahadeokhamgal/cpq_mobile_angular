@@ -2,17 +2,24 @@ export class QuoteModel {
     quoteId: number;
     customer: Customer;
     id: number;
+    name: string;
+    products: Product[];
+
     constructor(model: QuoteModal) {
         this.quoteId = model.quoteId;
+        this.name = model.name || 'Untitled';
         this.id = model.id;
         this.customer = model.customer;
+        this.products = model.products || [];
     }
 }
 
 export interface QuoteModal {
-    quoteId: number,
-    customer: Customer,
-    id: number
+    quoteId: number;
+    name: string;
+    customer: Customer;
+    id: number;
+    products: Product[];
 }
 
 export interface Customer {
@@ -20,12 +27,29 @@ export interface Customer {
     tier: string;
 }
 
+export interface Product {
+    "id": 1;
+    "productId": string;
+    "productName": string,
+    "productCategory": string
+}
 
-export const states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado',
-    'Connecticut', 'Delaware', 'District Of Columbia', 'Federated States Of Micronesia', 'Florida', 'Georgia',
-    'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine',
-    'Marshall Islands', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana',
-    'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
-    'Northern Mariana Islands', 'Ohio', 'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico', 'Rhode Island',
-    'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virgin Islands', 'Virginia',
-    'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+export const Customers = [
+    'Customer Customer BRT 1',
+    'Customer Alaska',
+    'Customer American Samoa',
+    'Customer Connecticut',
+    'Customer Delaware',
+    'Customer District Of Columbia',
+    'Customer Guam',
+    'Customer Hawaii',
+    'Customer Idaho',
+    'Customer Illinois',
+    'Customer Indiana',
+    'Customer Marshall Islands',
+    'Customer Maryland',
+    'Customer Tennessee',
+    'Customer Washington',
+    'Customer West Virginia',
+    'Customer Wisconsin',
+    'Customer Wyoming'];

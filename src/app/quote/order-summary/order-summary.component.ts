@@ -4,10 +4,10 @@ import { FormGroup } from '@angular/forms';
 import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core';
 
 @Component({
-  selector: 'contact-detail',
-  templateUrl: './contact-detail.component.html',
-  styleUrls: ['./contact-detail.component.less']
+  selector: 'order-summary',
+  templateUrl: './order-summary.component.html',
+  styleUrls: ['./order-summary.component.less']
 })
-export class ContactDetailComponent {
+export class OrderSummaryComponent {
   
 }

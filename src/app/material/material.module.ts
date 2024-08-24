@@ -16,6 +16,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     MatSidenavModule,
     MatTabsModule,
+    MatCardModule
   ],
   exports: [
     MatFormFieldModule,
@@ -50,6 +53,7 @@ import { RouterModule } from '@angular/router';
     MaterialComponent,
     MatAutocompleteComponent,
     NavbarComponent,
+    MatCardModule
   ]
 })
 export class MaterialModule { }

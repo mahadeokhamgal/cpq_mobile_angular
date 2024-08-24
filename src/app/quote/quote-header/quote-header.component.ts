@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { QuoteService } from 'src/app/quote.service';
+import { QuoteModal } from 'src/interface/common';
 
 @Component({
   selector: 'app-quote-header',
@@ -8,4 +10,9 @@ import { Component, Input } from '@angular/core';
 export class QuoteHeaderComponent {
   currentTab : string | undefined;
   tabs: string[] = ['customer', 'product', 'contact'];
+  quote: QuoteModal;
+
+  constructor(private quoteService: QuoteService) {
+    this.quote = quoteService.quote;
+  }
 }

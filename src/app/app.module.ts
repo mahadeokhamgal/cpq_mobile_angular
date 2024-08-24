@@ -12,9 +12,11 @@ import { AgGridLocalModule } from './ag-grid/ag-grid.module';
 import { NgxFormlyModule } from './ngx-formly/ngx-formly.module';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteHeaderComponent } from './quote/quote-header/quote-header.component';
-import { CustomerDetailComponent } from './quote/customer-detail/customer-detail.component';
 import { ProductDetailComponent } from './quote/product-detail/product-detail.component';
-import { ContactDetailComponent } from './quote/contact-detail/contact-detail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CartComponent } from './quote/product-detail/cart/cart.component';
+import { CatalogComponent } from './quote/product-detail/catalog/catalog.component';
+import { OrderSummaryComponent } from './quote/order-summary/order-summary.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ContactDetailComponent } from './quote/contact-detail/contact-detail.co
     QuoteHeaderComponent,
     // CustomerDetailComponent,
     ProductDetailComponent,
-    ContactDetailComponent,
+    OrderSummaryComponent,
+    CartComponent,
+    CatalogComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +40,7 @@ import { ContactDetailComponent } from './quote/contact-detail/contact-detail.co
     MaterialModule,
     AgGridLocalModule,
     NgxFormlyModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

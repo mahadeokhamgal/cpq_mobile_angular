@@ -15,21 +15,52 @@ export class AgGridBasicGridComponent {
 
   public columnDefs: ColDef[] = [
     {
-      field: 'company',
-      headerName: 'Company',
-      filter: CheckboxGenComponent,
+      headerCheckboxSelection:true,
       checkboxSelection: true,
     },
     {
-      field: 'name',
-      headerName: 'User Name',
-      filter: CheckboxGenComponent,
+      field: 'quotetype',
+      headerName: 'Type',
+      // filter: CheckboxGenComponent,
+      // checkboxSelection: true,
     },
     {
-      headerName: 'Is Service Active',
-      field: 'isActive',
+      field: 'quoteid',
+      headerName: 'quoteid',
+      // filter: CheckboxGenComponent,
+    },
+    {
+      headerName: 'name',
+      field: 'name',
+    },
+    {
+      field: 'cfu',
+      headerName: 'cfu',
+      // filter: CheckboxGenComponent,
+      // checkboxSelection: true,
+    },
+    {
+      field: 'custname',
+      headerName: 'custname',
+      // filter: CheckboxGenComponent,
+    },
+    {
+      headerName: 'opportunity_id',
+      field: 'opportunity_id',
     }
   ];
+
+  // 'quotetype',
+//     'quoteid',
+//     'name',
+//     'cfu',
+//     'custname',
+//     'opportunity_id',
+//     'status',
+//     'install',
+//     'monthly',
+//     'createdDate',
+//     'updatedDate'
 
   public themeClass: string =
     "ag-theme-quartz";
@@ -43,9 +74,10 @@ export class AgGridBasicGridComponent {
       // enable filtering 
       // enableFilter: true,
       columnDefs: this.columnDefs,
+      rowSelection:'multiple',
       rowData: [],
     };
-    this.http.get('http://localhost:3000/orders').subscribe(data  => {
+    this.http.get('http://localhost:3000/quotes').subscribe(data  => {
       console.log("data", data);
       this.rowDataC = data;
       this.gridApi?.setRowData(data as any[]);

@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core';
 import { Observable, of } from 'rxjs';
-import { QuoteModel, states } from 'src/interface/common';
+import { Customers, QuoteModel } from 'src/interface/common';
 import * as _ from 'lodash';
+import { QuoteService } from 'src/app/quote.service';
 
 @Component({
   selector: 'customer-detail',
@@ -13,34 +14,31 @@ import * as _ from 'lodash';
 })
 export class CustomerDetailComponent {
   form = new FormGroup({});
-  model: any = {};
   options: FormlyFormOptions = {};
   quote: QuoteModel;
-  constructor(private http: HttpClient) {
-    this.quote = new QuoteModel(this.model);
+  constructor(private http: HttpClient, private quoteService: QuoteService) {
+    this.quote = quoteService.quote;
   }
 
-  getOptionsObservable(): Observable<any> {
-    return new Observable(observer => {
-      this.http.get('/assets/options.json')
-        .subscribe((d: any) => {
-          observer.next(d.map((e: any) => { return { 'label': e, 'value': e } }));
-          observer.complete();
-        }, (err) => {
-          observer.error(err.message);
-        })
-    })
-  }
+  
 
   fields: FormlyFieldConfig[] =
     [
+      {
+        key: 'name',
+        type: 'input',
+        props: {
+          label: 'Quote Name',
+          required: true,
+        },
+      },
       {
         key: 'customer.name',
         type: 'typeahead',
         className: 'col-xs-6',
         props: {
           label: 'Customer Name',
-          filter: (term: any) => of(term ? this.filterStates(term) : states.slice()),
+          filter: (term: any) => of(term ? this.filterStates(term) : Customers.slice()),
         }
       },
       {
@@ -66,33 +64,20 @@ export class CustomerDetailComponent {
     ];
 
   filterStates(name: string) {
-    return states.filter(state =>
-      state.toLowerCase().indexOf(name.toLowerCase()) === 0);
+    return Customers.filter(cust =>
+      cust.toLowerCase().indexOf(name.toLowerCase()) === 0);
   }
 
   submit() {
-    console.log("this model", this.model);
-    if (!this.quote.quoteId) {
-      this.http.get('http://localhost:3000/quotes')
-      .subscribe((quotes) => {
-        console.log("allquotes", quotes);
-        let maxIdQuote = _.maxBy(quotes as QuoteModel[], (quote) => {
-          return quote.quoteId;
-        });
-        let nexId = ((maxIdQuote as QuoteModel).quoteId || 0) + 1;
-        console.log("maxQuoteId", nexId);
-        this.quote.quoteId = nexId;
-        this.quote.id = nexId;
-        this.http.post(`http://localhost:3000/quotes`, this.quote)
-        .subscribe(response => {
-          console.log("new quote created");
-          
-        })
-      })
-      // this.quote = new QuoteModel(this.model);
-      console.log("quote is", this.quote);
-
-    }
+    console.log("this model", this.quote);
+    this.quoteService.save(this.quote)
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+      
+    })
   }
 
 }

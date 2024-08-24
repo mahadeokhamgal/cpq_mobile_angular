@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormlyBasicComponent } from './formly-basic/formly-basic.component';
 import { FormlyFieldTabs } from './type/tabs.type';
 import { FormlyFieldSection } from './type/section.type';
 import { FormlyFieldFieldset } from './type/fieldset.type';
@@ -17,14 +16,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AgGridLocalModule } from '../ag-grid/ag-grid.module';
 import { GridFormlyCellComponent } from './type/grid-formly-cell.component';
 import { GridTypeComponent } from './type/aggrid.type';
-import { AggridIntegrationComponent } from './aggrid-integration/aggrid-integration.component';
 import { RowGroupTypeComponent } from './type/aggrid-rowgrp.type';
+import { CustomerDetailComponent } from '../quote/customer-detail/customer-detail.component';
 
 
 
 @NgModule({
   declarations: [
-    FormlyBasicComponent,
+    CustomerDetailComponent,
     FormlyFieldTabs,
     FormlyFieldSection,
     FormlyFieldFieldset,
@@ -34,7 +33,6 @@ import { RowGroupTypeComponent } from './type/aggrid-rowgrp.type';
     SafeHtmlPipe,
     GridTypeComponent,
     GridFormlyCellComponent,
-    AggridIntegrationComponent,
     RowGroupTypeComponent
   ],
   imports: [
@@ -62,7 +60,7 @@ import { RowGroupTypeComponent } from './type/aggrid-rowgrp.type';
     FormlyBootstrapModule,
   ],
   exports: [
-    FormlyBasicComponent,
+    CustomerDetailComponent,
     FormlyFieldTabs,
     FormlyFieldSection,
     FormlyFieldFieldset,

@@ -1,0 +1,11 @@
+<mat-tab-group>
+    <mat-tab label="Customer" (click)="currentTab = 'customer'"> 
+        <customer-detail></customer-detail>
+    </mat-tab>
+    <mat-tab label="Product" (click)="currentTab = 'product'"> 
+        <product-detail></product-detail>
+    </mat-tab>
+    <mat-tab label="Customer Contact" (click)="currentTab = 'contact'"> 
+        <contact-detail></contact-detail>
+    </mat-tab>
+</mat-tab-group>

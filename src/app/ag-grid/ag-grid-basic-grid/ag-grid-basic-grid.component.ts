@@ -26,7 +26,7 @@ export class AgGridBasicGridComponent {
     },
     {
       field: 'quoteid',
-      headerName: 'quoteid',
+      headerName: 'quoteId',
       // filter: CheckboxGenComponent,
     },
     {
@@ -41,7 +41,7 @@ export class AgGridBasicGridComponent {
     },
     {
       field: 'custname',
-      headerName: 'custname',
+      headerName: 'name',
       // filter: CheckboxGenComponent,
     },
     {

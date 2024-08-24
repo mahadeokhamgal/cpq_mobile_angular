@@ -53,14 +53,14 @@ export class CustomerDetailComponent {
           ]
         }
       },
-      {
-        key: 'customer.creditState',
-        type: 'htmlTemplate',
-        'props': {
-          'label': 'Credit Status',
-          'html': '<h2>Injected html</h2>'
-        }
-      }
+      // {
+      //   key: 'customer.creditState',
+      //   type: 'htmlTemplate',
+      //   'props': {
+      //     'label': 'Credit Status',
+      //     'html': '<h2>Injected html</h2>'
+      //   }
+      // }
     ];
 
   filterStates(name: string) {

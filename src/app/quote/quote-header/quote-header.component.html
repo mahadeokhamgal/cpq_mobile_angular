@@ -1,6 +1,6 @@
 <div class="quoteInfo">
-    <span>QuoteId : {{quote.quoteId}}</span>
-    <span>Quote Name: {{quote.name}}</span>
+    <span>OrderId : {{quote.quoteId}}</span>
+    <span>Order Name: {{quote.name}}</span>
 </div>
 <mat-tab-group>
     <mat-tab label="Customer" (click)="currentTab = 'customer'"> 
@@ -9,7 +9,7 @@
     <mat-tab label="Product" (click)="currentTab = 'product'"> 
         <product-detail></product-detail>
     </mat-tab>
-    <mat-tab label="Customer Contact" (click)="currentTab = 'contact'"> 
+    <mat-tab label="Order Summary" (click)="currentTab = 'summary'"> 
         <order-summary></order-summary>
     </mat-tab>
 </mat-tab-group>

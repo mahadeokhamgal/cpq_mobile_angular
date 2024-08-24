@@ -9,7 +9,7 @@ import { QuoteModal } from 'src/interface/common';
 })
 export class QuoteHeaderComponent {
   currentTab : string | undefined;
-  tabs: string[] = ['customer', 'product', 'contact'];
+  tabs: string[] = ['customer', 'product', 'summary'];
   quote: QuoteModal;
 
   constructor(private quoteService: QuoteService) {

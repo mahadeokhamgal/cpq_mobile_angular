@@ -28,7 +28,7 @@ export class CustomerDetailComponent {
         key: 'name',
         type: 'input',
         props: {
-          label: 'Quote Name',
+          label: 'Order Name',
           required: true,
         },
       },
@@ -46,7 +46,7 @@ export class CustomerDetailComponent {
         "className": "col-xs-3",
         "type": "select",
         'props': {
-          "label": "This is static option Array Field",
+          "label": "Customer Tier",
           "options": [
             { 'label': 'GOV', 'value': 'GOV' },
             { 'label': 'RETAIL', 'value': 'RETAIL' }

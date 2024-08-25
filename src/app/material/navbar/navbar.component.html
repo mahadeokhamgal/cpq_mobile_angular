@@ -1,7 +1,28 @@
-<mat-toolbar>
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item ><a [routerLink]="['/inventory']"> inventory </a></button>
-        <button mat-menu-item ><a [routerLink]="['/quote']"> Create Quote </a></button>
-    </mat-menu>
-</mat-toolbar>
+<button type="button" mat-button (click)="drawer.toggle()">
+    Toggle sidenav
+</button>
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <ul style="list-style-type:none; padding-left: 0;">
+            <li>
+                <button class="cpq-nav-button">
+                    <a [routerLink]="['/inventory']"> inventory </a>
+                </button>
+                
+            </li>
+            <li>
+                <button class="cpq-nav-button">
+                    <a [routerLink]="['/quote']"> Create Quote </a>
+                </button>
+                
+            </li>
+        </ul>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+        <!-- <app-quote-header></app-quote-header> -->
+    </div>
+
+</mat-drawer-container>

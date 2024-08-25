@@ -17,11 +17,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartComponent } from './quote/product-detail/cart/cart.component';
 import { CatalogComponent } from './quote/product-detail/catalog/catalog.component';
 import { OrderSummaryComponent } from './quote/order-summary/order-summary.component';
+import { NavbarComponent } from './material/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomePageComponent,
+    NavbarComponent,
     QuoteComponent,
     QuoteHeaderComponent,
     // CustomerDetailComponent,

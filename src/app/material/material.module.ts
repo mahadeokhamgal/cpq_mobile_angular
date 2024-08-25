@@ -23,7 +23,7 @@ import {MatCardModule} from '@angular/material/card';
   declarations: [
     MaterialComponent,
     MatAutocompleteComponent,
-    NavbarComponent,
+    // NavbarComponent,
   ],
   imports: [
     CommonModule,
@@ -51,9 +51,9 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatTabsModule,
     MaterialComponent,
-    MatAutocompleteComponent,
-    NavbarComponent,
-    MatCardModule
+    MatCardModule,
+    MatMenuModule,
+    MatAutocompleteComponent
   ]
 })
 export class MaterialModule { }

@@ -20,7 +20,7 @@ export class CustomerDetailComponent {
     this.quote = quoteService.quote;
   }
 
-  
+
 
   fields: FormlyFieldConfig[] =
     [
@@ -30,36 +30,33 @@ export class CustomerDetailComponent {
         props: {
           label: 'Order Name',
           required: true,
+          className: 'custom-input-class'
         },
       },
       {
         key: 'customer.name',
         type: 'typeahead',
-        className: 'col-xs-6',
         props: {
           label: 'Customer Name',
           filter: (term: any) => of(term ? this.filterStates(term) : Customers.slice()),
+          className: 'custom-typeahead-class'
         }
       },
       {
-        "key": "customer.tier",
-        "className": "col-xs-3",
-        "type": "select",
-        'props': {
-          "label": "Customer Tier",
-          "options": [
-            { 'label': 'GOV', 'value': 'GOV' },
-            { 'label': 'RETAIL', 'value': 'RETAIL' }
-          ]
+        key: 'customer.tier',
+        type: 'select',
+        props: {
+          label: 'Customer Tier',
+          options: [
+            { label: 'GOV', value: 'GOV' },
+            { label: 'RETAIL', value: 'RETAIL' }
+          ],
+          className: 'custom-select-class'
         }
       },
       // {
       //   key: 'customer.creditState',
       //   type: 'htmlTemplate',
-      //   'props': {
-      //     'label': 'Credit Status',
-      //     'html': '<h2>Injected html</h2>'
-      //   }
       // }
     ];
 
@@ -71,13 +68,12 @@ export class CustomerDetailComponent {
   submit() {
     console.log("this model", this.quote);
     this.quoteService.save(this.quote)
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((err) => {
-      console.log(err);
-      
-    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   }
 
 }

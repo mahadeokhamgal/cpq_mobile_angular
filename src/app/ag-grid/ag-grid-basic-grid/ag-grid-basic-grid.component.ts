@@ -15,55 +15,55 @@ export class AgGridBasicGridComponent {
 
   public columnDefs: ColDef[] = [
     {
-      headerCheckboxSelection:true,
+      headerCheckboxSelection: true,
       checkboxSelection: true,
+      width: 30,
     },
     {
-      field: 'quotetype',
-      headerName: 'Type',
+      field: 'quoteId',
+      headerName: 'Quote Id',
+      flex: 0.7,
+      // filter: CheckboxGenComponent,
+    },
+    {
+      field: 'productName',
+      headerName: 'Product Name',
+      flex: 1,
+      // filter: CheckboxGenComponent,
+      // checkboxSelection: true,
+    },
+
+    {
+      headerName: 'Plan Type',
+      field: 'planType',
+      flex: 1.5,
+    },
+    {
+      field: 'data',
+      headerName: 'Data',
+      flex: 1,
       // filter: CheckboxGenComponent,
       // checkboxSelection: true,
     },
     {
-      field: 'quoteid',
-      headerName: 'quoteId',
-      // filter: CheckboxGenComponent,
-    },
-    {
-      headerName: 'name',
-      field: 'name',
-    },
-    {
-      field: 'cfu',
-      headerName: 'cfu',
+      field: 'price',
+      headerName: 'Prices',
+      flex: 1,
       // filter: CheckboxGenComponent,
       // checkboxSelection: true,
     },
     {
-      field: 'custname',
-      headerName: 'name',
+      field: 'customer.name',
+      headerName: 'Customer Name',
+      flex: 1.2,
       // filter: CheckboxGenComponent,
     },
     {
-      headerName: 'opportunity_id',
-      field: 'opportunity_id',
+      headerName: 'Status',
+      field: 'status',
+      flex: 1,
     }
   ];
-
-  // 'quotetype',
-//     'quoteid',
-//     'name',
-//     'cfu',
-//     'custname',
-//     'opportunity_id',
-//     'status',
-//     'install',
-//     'monthly',
-//     'createdDate',
-//     'updatedDate'
-
-  public themeClass: string =
-    "ag-theme-quartz";
   frameworkComponents: any;
   gridOptions: GridOptions<any>;
   rowDataC: any;
@@ -71,13 +71,15 @@ export class AgGridBasicGridComponent {
   constructor(private http: HttpClient) {
     this.gridOptions = <GridOptions>{
       // enableSorting: true,
-      // enable filtering 
+      // enable filtering
       // enableFilter: true,
+      headerHeight: 42,
+      rowHeight: 38,
       columnDefs: this.columnDefs,
-      rowSelection:'multiple',
+      rowSelection: 'multiple',
       rowData: [],
     };
-    this.http.get('http://localhost:3000/quotes').subscribe(data  => {
+    this.http.get('http://localhost:3000/orders').subscribe(data => {
       console.log("data", data);
       this.rowDataC = data;
       this.gridApi?.setRowData(data as any[]);

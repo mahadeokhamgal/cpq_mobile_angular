@@ -6,9 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.less']
 })
 export class NavbarComponent {
+  showFiller: boolean = false;
+
   constructor(){
 
   }
+  
   navigate(url: string){
 
   }

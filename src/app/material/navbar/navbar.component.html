@@ -7,13 +7,13 @@
         <ul style="list-style-type:none; padding-left: 0;">
             <li>
                 <button class="cpq-nav-button">
-                    <a [routerLink]="['/inventory']"> inventory </a>
+                    <span (click)="navigateTo('inventory')"> inventory </span>
                 </button>
                 
             </li>
             <li>
                 <button class="cpq-nav-button">
-                    <a [routerLink]="['/quote']"> Create Quote </a>
+                    <span (click)="navigateTo('quote')"> Create Quote </span>
                 </button>
                 
             </li>

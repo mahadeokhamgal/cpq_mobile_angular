@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,11 +9,14 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   showFiller: boolean = false;
 
-  constructor(){
+  constructor(private router: Router){
 
   }
   
-  navigate(url: string){
+  // navigate(url: string){
 
+  // }
+  navigateTo(url: string) {
+    this.router.navigate(['/'+ url]);
   }
 }

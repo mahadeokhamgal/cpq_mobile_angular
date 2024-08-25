@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { QuoteService } from 'src/app/quote.service';
-import { Product } from 'src/interface/common';
+import { Product, ProductCatalog } from 'src/interface/common';
 
 @Component({
   selector: 'product-catalog',
@@ -8,7 +8,7 @@ import { Product } from 'src/interface/common';
   styleUrls: ['./catalog.component.less']
 })
 export class CatalogComponent {
-  products: any[] = [];
+  products: ProductCatalog[] = [];
   constructor(private quoteService: QuoteService) {
     console.log("model is", quoteService.quote);
     this.fetchProducts();
@@ -18,16 +18,31 @@ export class CatalogComponent {
     this.quoteService.fetchProducts()
       .then((res) => {
         console.log("res", res);
-        this.products = res as any[];
+        this.products = res as ProductCatalog[];
       })
       .catch((err) => {
         console.log("err", err);
       })
   }
 
-  addToCart(product: any) {
+  /**
+   * 
+   * @param product 
+   * @param qty 
+   */
+  addToCart(product: ProductCatalog, qty: string = '1') {
+    /**
+     * to check if product already added.
+     * 
+     */
+    
+    this.quoteService.quote.products = this.quoteService.quote?.products?.filter(p => p.productId != product.productId);
     console.log("products is", product, this.quoteService.quote);
-    this.quoteService.addProduct(product);
+    this.quoteService.addProduct(product, Number(qty));
+  }
+
+  addedToCart(productId: string) {
+    return this.quoteService.quote.products?.find(p => p.productId == productId);
   }
 
 }

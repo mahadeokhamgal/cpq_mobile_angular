@@ -26,27 +26,26 @@ export class AgGridBasicGridComponent {
       // filter: CheckboxGenComponent,
     },
     {
-      field: 'productName',
+      field: 'products.0.productName',
       headerName: 'Product Name',
       flex: 1,
       // filter: CheckboxGenComponent,
       // checkboxSelection: true,
     },
-
+    // {
+    //   headerName: 'Plan Type',
+    //   field: 'products.0.productName',
+    //   flex: 1.5,
+    // },
     {
-      headerName: 'Plan Type',
-      field: 'planType',
-      flex: 1.5,
-    },
-    {
-      field: 'data',
+      field: 'products.0.data',
       headerName: 'Data',
       flex: 1,
       // filter: CheckboxGenComponent,
       // checkboxSelection: true,
     },
     {
-      field: 'price',
+      field: 'products.0.price',
       headerName: 'Prices',
       flex: 1,
       // filter: CheckboxGenComponent,
@@ -79,7 +78,7 @@ export class AgGridBasicGridComponent {
       rowSelection: 'multiple',
       rowData: [],
     };
-    this.http.get('http://localhost:3000/orders').subscribe(data => {
+    this.http.get('http://localhost:3000/quotes').subscribe(data => {
       console.log("data", data);
       this.rowDataC = data;
       this.gridApi?.setRowData(data as any[]);

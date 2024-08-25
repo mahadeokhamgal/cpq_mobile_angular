@@ -8,8 +8,7 @@ import { QuoteModal } from 'src/interface/common';
   styleUrls: ['./quote-header.component.less']
 })
 export class QuoteHeaderComponent {
-  currentTab : string | undefined;
-  tabs: string[] = ['customer', 'product', 'summary'];
+  
   quote: QuoteModal;
 
   constructor(private quoteService: QuoteService) {

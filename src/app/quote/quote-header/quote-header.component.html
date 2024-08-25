@@ -3,13 +3,13 @@
     <span>Order Name: {{quote.name}}</span>
 </div>
 <mat-tab-group>
-    <mat-tab label="Customer" (click)="currentTab = 'customer'"> 
+    <mat-tab label="Customer"> 
         <customer-detail></customer-detail>
     </mat-tab>
-    <mat-tab label="Product" (click)="currentTab = 'product'"> 
+    <mat-tab label="Product" > 
         <product-detail></product-detail>
     </mat-tab>
-    <mat-tab label="Order Summary" (click)="currentTab = 'summary'"> 
+    <mat-tab label="Order Summary" > 
         <order-summary></order-summary>
     </mat-tab>
 </mat-tab-group>

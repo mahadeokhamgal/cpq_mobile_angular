@@ -1,7 +1,7 @@
 export class QuoteModel {
     quoteId: number;
     customer: Customer;
-    id: number;
+    id: string;
     name: string;
     products: Product[];
 
@@ -18,7 +18,7 @@ export interface QuoteModal {
     quoteId: number;
     name: string;
     customer: Customer;
-    id: number;
+    id: string;
     products: Product[];
 }
 
@@ -28,10 +28,25 @@ export interface Customer {
 }
 
 export interface Product {
-    "id": 1;
+    "id": number;
     "productId": string;
     "productName": string,
-    "productCategory": string
+    "productCategory": string,
+    "data": number,
+    "price": number,
+    "features": string[],
+    quntity: number
+}
+
+export interface ProductCatalog {
+    "id": number;
+    "productId": string;
+    "productName": string,
+    "productCategory": string,
+    "data": number,
+    "price": number,
+    "features": string[],
+    quntity: number
 }
 
 export const Customers = [

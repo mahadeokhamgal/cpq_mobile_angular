@@ -66,6 +66,9 @@ export class CustomerDetailComponent {
   }
 
   submit() {
+    /**
+     * use copilot to do validation here.
+     */
     console.log("this model", this.quote);
     this.quoteService.save(this.quote)
       .then((res) => {

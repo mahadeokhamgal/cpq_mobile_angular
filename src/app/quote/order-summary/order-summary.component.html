@@ -3,10 +3,11 @@
     <div class="cart-item">
         <div class="item-details">
             <h2>SIM Plan</h2>
-            <p>Medium Choice Plus Plan</p>
-            <p>180GB data | Month-to-month | Physical SIM</p>
+            <p>{{quote.products[0]?.productName}}</p>
+            <p>{{quote.products[0]?.data}} data | Month-to-month | Physical SIM</p>
         </div>
-        <div class="item-price">$62/mth</div>
+        <div class="item-price">${{quote.products[0]?.price}}/mth</div>
+        <div class="item-qty" style="padding-left: 10px;">Quanity {{quote.products[0]?.quntity}}</div>
         <div class="item-actions">
             <button>Edit</button>
             <button>Remove</button>
@@ -17,7 +18,7 @@
     </div>
     <div class="summary">
         <h2>Summary of charges</h2>
-        <p>Total monthly: $62</p>
+        <p>Total monthly: ${{getTotal(quote.products[0])}}</p>
         <p>Delivery: FREE</p>
     </div>
     <div class="actions">

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { QuoteModal, QuoteModel } from 'src/interface/common';
+import { ProductCatalog, QuoteModal, QuoteModel } from 'src/interface/common';
 import * as _ from 'lodash';
 
 @Injectable({
@@ -35,10 +35,10 @@ export class QuoteService {
             let maxIdQuote = _.maxBy(quotes as QuoteModel[], (quote) => {
               return quote.quoteId;
             });
-            let nexId = ((maxIdQuote as QuoteModel).quoteId || 0) + 1;
+            let nexId = ((maxIdQuote as QuoteModel)?.quoteId || 0) + 1;
             console.log("maxQuoteId", nexId);
             model.quoteId = nexId;
-            model.id = nexId;
+            model.id = String(nexId);
             this.quote = model;
             this.http.post(`http://localhost:3000/quotes`, model)
               .subscribe(response => {
@@ -53,6 +53,8 @@ export class QuoteService {
         console.log("quote is", model);
       } else {
         this.quote = model;
+        let objectToPatch: any = _.cloneDeep(model);
+        // delete objectToPatch.id;
         this.http.patch(`http://localhost:3000/quotes/${model.quoteId}`, model)
           .subscribe(response => {
             console.log("new quote created");
@@ -83,10 +85,12 @@ export class QuoteService {
   }
 
   
-  addProduct(product: any): void {
+  addProduct(product: ProductCatalog, qty: number = 1): void {
     let temoProd = {
-      ...product
+      ...product,
+      quntity: qty || 1
     }
     this.quote.products.push(temoProd);
+    this.save(this.quote);
   }
 }

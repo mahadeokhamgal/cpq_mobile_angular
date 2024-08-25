@@ -64,210 +64,146 @@
     {
       "id": "1",
       "quoteId": 1,
+      "name": "Untitled - test_1",
       "customer": {
-        "name": "Alabama",
+        "name": "Customer Customer BRT 1",
         "tier": "GOV"
-      }
+      },
+      "products": [
+        {
+          "id": "3",
+          "productId": "large",
+          "productName": "Large Choice Plus Plan",
+          "productCategory": "premium",
+          "data": "240",
+          "price": "98",
+          "features": [
+            "5G network access",
+            "No lock-in contract",
+            "No excess data charges",
+            "Unlimited standard national talk & text",
+            "Unlimited standard international calls to selected destinations"
+          ],
+          "quntity": 4
+        }
+      ]
     },
     {
       "id": "2",
       "quoteId": 2,
+      "name": "Untitled - test_1",
       "customer": {
-        "name": "Alabama",
+        "name": "Customer Customer BRT 1",
         "tier": "GOV"
-      }
+      },
+      "products": [
+        {
+          "id": "3",
+          "productId": "large",
+          "productName": "Large Choice Plus Plan",
+          "productCategory": "premium",
+          "data": "240",
+          "price": "98",
+          "features": [
+            "5G network access",
+            "No lock-in contract",
+            "No excess data charges",
+            "Unlimited standard national talk & text",
+            "Unlimited standard international calls to selected destinations"
+          ],
+          "quntity": 4
+        }
+      ]
     },
     {
       "id": "3",
       "quoteId": 3,
+      "name": "Untitled - test_1",
       "customer": {
-        "name": "Alabama",
-        "tier": "GOV"
-      }
-    },
-    {
-      "id": "4",
-      "quoteId": 4,
-      "customer": {
-        "name": "Alabama",
-        "tier": "GOV"
-      }
-    },
-    {
-      "id": "5",
-      "quoteId": 5,
-      "name": "Untitled abc",
-      "customer": {
-        "name": "Alabama",
-        "tier": "GOV"
-      }
-    },
-    {
-      "id": "6",
-      "quoteId": 6,
-      "name": "Untitled abc2",
-      "customer": {
-        "name": "American Samoa",
-        "tier": "GOV"
-      }
-    },
-    {
-      "id": "7",
-      "quoteId": 7,
-      "name": "Untitled abc-2",
-      "customer": {
-        "name": "Arizona",
-        "tier": "GOV"
-      }
-    },
-    {
-      "id": "8",
-      "quoteId": 8,
-      "name": "Untitled abc-4",
-      "customer": {
-        "name": "California",
-        "tier": "GOV"
-      }
-    },
-    {
-      "id": "9",
-      "quoteId": 9,
-      "name": "Untitled abc-5",
-      "customer": {
-        "name": "Connecticut",
-        "tier": "GOV"
-      }
-    },
-    {
-      "id": "10",
-      "quoteId": 10,
-      "name": "Untitled abc-6",
-      "customer": {
-        "name": "Colorado",
-        "tier": "GOV"
-      }
-    },
-    {
-      "id": "11",
-      "quoteId": 11,
-      "name": "Untitled abc-7",
-      "customer": {
-        "name": "Alabama",
-        "tier": "GOV"
-      }
-    },
-    {
-      "id": "12",
-      "quoteId": 12,
-      "name": "Untitled abc-8",
-      "customer": {
-        "name": "Alabama",
-        "tier": "GOV"
-      }
-    },
-    {
-      "id": "13",
-      "quoteId": 13,
-      "name": "Untitled - abc-9",
-      "customer": {
-        "name": "Alaska",
+        "name": "Customer Delaware",
         "tier": "GOV"
       },
-      "products": []
-    },
-    {
-      "id": "14",
-      "quoteId": 14,
-      "name": "Untitled - 10",
-      "customer": {
-        "name": "Arkansas",
-        "tier": "GOV"
-      },
-      "products": []
-    },
-    {
-      "id": "15",
-      "quoteId": 15,
-      "name": "Untitled - n",
-      "customer": {
-        "name": "Customer Customer BRT 1",
-        "tier": "GOV"
-      },
-      "products": []
-    },
-    {
-      "id": "16",
-      "quoteId": 16,
-      "name": "Untitled - mrt",
-      "customer": {
-        "name": "Customer Alaska",
-        "tier": "RETAIL"
-      },
-      "products": []
-    },
-    {
-      "id": "17",
-      "quoteId": 17,
-      "name": "Untitled",
-      "customer": {
-        "name": "Customer Customer BRT 1",
-        "tier": "GOV"
-      },
-      "products": []
-    },
-    {
-      "id": "18",
-      "quoteId": 18,
-      "name": "Untitled Pratik-123",
-      "customer": {
-        "name": "Customer Customer BRT 1",
-        "tier": "GOV"
-      },
-      "products": []
-    },
-    {
-      "id": 19,
-      "quoteId": 19,
-      "name": "Untitled - 123",
-      "customer": {
-        "name": "Customer Customer BRT 1",
-        "tier": "GOV"
-      },
-      "products": []
-    },
-    {
-      "id": 20,
-      "quoteId": 20,
-      "name": "Untitled 123",
-      "customer": {
-        "name": "Customer Alaska",
-        "tier": "GOV"
-      },
-      "products": []
-    },
-    {
-      "id": 21,
-      "quoteId": 21,
-      "name": "Untitled abc-2",
-      "customer": {
-        "name": "Customer Connecticut",
-        "tier": "GOV"
-      },
-      "products": []
+      "products": [
+        {
+          "id": "2",
+          "productId": "medium",
+          "productName": "Medium Choice Plus Plan",
+          "productCategory": "small_to_medium",
+          "data": "180",
+          "price": "82",
+          "features": [
+            "5G network access",
+            "lock-in contract",
+            "No excess data charges",
+            "Unlimited standard national talk & text",
+            "Unlimited standard international calls to selected destinations"
+          ],
+          "quntity": 4
+        }
+      ]
     }
   ],
   "products": [
     {
       "id": "1",
-      "productId": "sdinternet",
-      "productName": "SD Internet",
-      "productCategory": "SD"
+      "productId": "small",
+      "productName": "Small Choice Mini Plan",
+      "productCategory": "small_to_medium",
+      "data": "60",
+      "price": "52",
+      "features": [
+        "5G network access",
+        "lock-in contract",
+        "Excess data charges",
+        "Limited standard national talk & text",
+        "LImited standard international calls to selected destinations"
+      ]
     },
     {
       "id": "2",
-      "productId": "internet",
-      "productName": "Evolve Internet",
-      "productCategory": "Evolve"
+      "productId": "medium",
+      "productName": "Medium Choice Plus Plan",
+      "productCategory": "small_to_medium",
+      "data": "180",
+      "price": "82",
+      "features": [
+        "5G network access",
+        "lock-in contract",
+        "No excess data charges",
+        "Unlimited standard national talk & text",
+        "Unlimited standard international calls to selected destinations"
+      ]
+    },
+    {
+      "id": "3",
+      "productId": "large",
+      "productName": "Large Choice Plus Plan",
+      "productCategory": "premium",
+      "data": "240",
+      "price": "98",
+      "features": [
+        "5G network access",
+        "No lock-in contract",
+        "No excess data charges",
+        "Unlimited standard national talk & text",
+        "Unlimited standard international calls to selected destinations"
+      ]
+    },
+    {
+      "id": "4",
+      "productId": "premium",
+      "productName": "Premium Choice Plus Plan",
+      "productCategory": "premium",
+      "data": "820",
+      "price": "198",
+      "features": [
+        "5G network access",
+        "No lock-in contract",
+        "No excess data charges",
+        "OTT subscription to 5 mainstream channels",
+        "Unlimited standard national talk & text",
+        "Unlimited standard international calls to selected destinations"
+      ]
     }
   ]
 }

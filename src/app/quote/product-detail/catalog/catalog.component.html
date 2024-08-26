@@ -4,7 +4,7 @@
             <h3 class="plan-header">{{product.productName}}</h3>
             <p class="data-allowance">{{product.data}} GB</p>
             <p class="price">${{product.price}} per month</p>
-            <ul>
+            <ul style="font-size: 12px;">
                 <li *ngFor="let feature of product.features">{{feature}}</li>
             </ul>
             <title>Qty</title>
@@ -13,3 +13,4 @@
         </div>
     </div>
 </div>
+ 

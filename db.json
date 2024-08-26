@@ -141,6 +141,81 @@
           "quntity": 4
         }
       ]
+    },
+    {
+      "id": "4",
+      "quoteId": 4,
+      "name": "Untitled",
+      "products": [
+        {
+          "id": "1",
+          "productId": "small",
+          "productName": "Small Choice Mini Plan",
+          "productCategory": "small_to_medium",
+          "data": "60",
+          "price": "52",
+          "features": [
+            "5G network access",
+            "lock-in contract",
+            "Excess data charges",
+            "Limited standard national talk & text",
+            "LImited standard international calls to selected destinations"
+          ],
+          "quntity": 1
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "quoteId": 5,
+      "name": "Untitled",
+      "products": [
+        {
+          "id": "1",
+          "productId": "small",
+          "productName": "Small Choice Mini Plan",
+          "productCategory": "small_to_medium",
+          "data": "60",
+          "price": "52",
+          "features": [
+            "5G network access",
+            "lock-in contract",
+            "Excess data charges",
+            "Limited standard national talk & text",
+            "LImited standard international calls to selected destinations"
+          ],
+          "quntity": 1
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "quoteId": 6,
+      "name": "Untitled",
+      "products": []
+    },
+    {
+      "id": "7",
+      "quoteId": 7,
+      "name": "Untitled",
+      "products": [
+        {
+          "id": "2",
+          "productId": "medium",
+          "productName": "Medium Choice Plus Plan",
+          "productCategory": "small_to_medium",
+          "data": "180",
+          "price": "82",
+          "features": [
+            "5G network access",
+            "lock-in contract",
+            "No excess data charges",
+            "Unlimited standard national talk & text",
+            "Unlimited standard international calls to selected destinations"
+          ],
+          "quntity": 1
+        }
+      ]
     }
   ],
   "products": [
@@ -192,7 +267,7 @@
     {
       "id": "4",
       "productId": "premium",
-      "productName": "Premium Choice Plus Plan",
+      "productName": "Premium Choice Plan",
       "productCategory": "premium",
       "data": "820",
       "price": "198",

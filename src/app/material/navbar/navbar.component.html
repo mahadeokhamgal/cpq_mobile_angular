@@ -1,6 +1,7 @@
-<button type="button" mat-button (click)="drawer.toggle()">
-    Toggle Sidenav
-</button>
+<!-- <button type="button" (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+</button> -->
+<mat-icon (click)="drawer.toggle()" style="margin-left: 20px; cursor: pointer;">menu</mat-icon>
 
 <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
@@ -9,13 +10,13 @@
                 <button class="cpq-nav-button">
                     <span (click)="navigateTo('inventory')"> Inventory </span>
                 </button>
-                
+
             </li>
             <li>
                 <button class="cpq-nav-button">
                     <span (click)="navigateTo('quote')"> Create Quote </span>
                 </button>
-                
+
             </li>
         </ul>
     </mat-drawer>

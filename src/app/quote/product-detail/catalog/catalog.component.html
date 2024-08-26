@@ -1,8 +1,8 @@
 <div class="container">
     <div class="container2">
         <div *ngFor="let product of products" class="plan-container">
-            <h2 class="plan-header">{{product.productName}}</h2>
-            <p class="data-allowance">{{product.data}}GB</p>
+            <h3 class="plan-header">{{product.productName}}</h3>
+            <p class="data-allowance">{{product.data}} GB</p>
             <p class="price">${{product.price}} per month</p>
             <ul>
                 <li *ngFor="let feature of product.features">{{feature}}</li>
